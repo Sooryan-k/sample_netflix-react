@@ -1,22 +1,31 @@
-.banner{
-    background-size: cover;
+.banner {
+    background-size: cover; 
+    background-position: top center; 
     height: 450px;
     color: white;
+    position: relative;
+    overflow: hidden;
 }
-.content{
+
+.content {
     margin-top: 4.4rem;
     padding-top: 100px;
-    height: 190px;
     padding-left: 15px;
-
+    max-width: 100%; 
 }
-.title{
+
+.title {
     font-size: 2rem;
     font-weight: 800;
     padding-bottom: 0.3rem;
 }
 
-.btns{
+.btn {
+    display: flex;
+    gap: 10px; 
+}
+
+.btns {
     color: aliceblue;
     outline: none;
     border: none;
@@ -24,15 +33,16 @@
     border-radius: 5px;
     padding: 0.5rem 2rem;
     background-color: rgba(51, 51, 51, 0.5);
-    margin: ;
-
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-.btns:hover{
+
+.btns:hover {
     color: black;
     background-color: aliceblue;
 }
-.description{
+
+.description {
     width: 45rem;
     line-height: 1.3;
     padding-top: 1rem;
@@ -40,7 +50,81 @@
     height: 80px;
     max-width: 360px;
 }
-.fade_bottom{
+
+.fade_bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%; 
     height: 10rem;
-    background-image: linear-gradient(180deg,transparent,rgba(37,37,37,.61),#111);
+    background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
+}
+
+/* Media query for larger screens */
+@media (min-width: 1200px) {
+    .banner {
+        height: 600px; 
+        background-size: contain; /* Show the entire image */
+        background-position: center center; /* Focus on the center of the image */
+    }
+
+    .content {
+        padding-top: 150px; 
+    }
+
+    .description {
+        width: 50rem; 
+        max-width: none;
+    }
+}
+
+/* Media query for tablet devices */
+@media (max-width: 768px) {
+    .banner {
+        height: 400px; 
+    }
+
+    .content {
+        padding-top: 80px;
+        padding-left: 10px;
+    }
+
+    .title {
+        font-size: 1.8rem; 
+    }
+
+    .description {
+        width: 100%; 
+        max-width: none;
+        font-size: 0.9rem;
+    }
+
+    .btns {
+        padding: 0.4rem 1.5rem; 
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .banner {
+        height: 350px; 
+    }
+
+    .content {
+        padding-top: 60px;
+        padding-left: 8px;
+    }
+
+    .title {
+        font-size: 1.5rem; 
+    }
+
+    .description {
+        width: 100%; 
+        max-width: none;
+        font-size: 0.8rem;
+    }
+
+    .btns {
+        padding: 0.3rem 1rem; 
+    }
 }

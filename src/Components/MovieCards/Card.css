@@ -1,30 +1,75 @@
-.row{
+.row {
     margin-left: 20px;
     color: #fff;
 }
-.card{
+
+.card {
     display: flex;
     padding: 20px;
-    overflow-x: scroll;
+    overflow-x: scroll; /* Horizontal scrolling */
     overflow-y: hidden;
+    scroll-behavior: smooth; /* Smooth scrolling for better UX */
 }
-.card::-webkit-scrollbar{
-    display: none;
+
+.card::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
 }
-.cards{
+
+.cards {
     max-height: 250px;
     margin-left: 10px;
     cursor: pointer;
-    
+    transition: transform 0.3s ease; 
 }
-.cards:hover{
-    transform: scale(1.09);
+
+.cards:hover {
+    transform: scale(1.09); 
 }
-.smallCards{
+
+.smallCards {
     cursor: pointer;
     max-height: 150px;
     margin-left: 10px;
+    transition: transform 0.3s ease;
 }
-.smallCards:hover{
-    transform: scale(1.09);
+
+.smallCards:hover {
+    transform: scale(1.09); 
+}
+
+/* Media query for tablet devices */
+@media (max-width: 768px) {
+    .cards {
+        max-height: 200px; 
+        margin-left: 8px;
+    }
+
+    .smallCards {
+        max-height: 120px; 
+    }
+
+    .card {
+        padding: 15px; 
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .cards {
+        max-height: 150px; 
+        margin-left: 5px;
+    }
+
+    .smallCards {
+        max-height: 100px;
+        margin-left: 5px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .row {
+        margin-left: 10px; 
+    }
 }
